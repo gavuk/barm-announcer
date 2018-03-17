@@ -1,0 +1,11 @@
+{
+  "name": "barmannouncer",
+  "version": "1.0.0",
+  "description": "Listens for the app scanning the network and responds with the device name",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Gavin Abson <gavin.abson@gmail.com>",
+  "license": "ISC"
+}
