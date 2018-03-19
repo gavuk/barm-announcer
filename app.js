@@ -6,4 +6,4 @@ var os = require('os');
 http.createServer(function (req, res) {
   res.write(os.hostname()); //write out the hostname
   res.end(); //end the response
-}).listen(3001); //the server object listens on port 8080
+}).listen(5001); //the server object
