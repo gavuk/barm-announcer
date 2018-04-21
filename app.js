@@ -30,8 +30,8 @@ http.createServer(function (req, res) {
     }
 
     // Create a JSON string
-    var outputArray = [os.hostname(), port];
-    var jsonOutput = JSON.stringify(outputArray);
+    var outputObject = { 'name': os.hostname(), 'port': port };
+    var jsonOutput = JSON.stringify(outputObject);
     res.write(jsonOutput); //write out the JSON string
     res.end(); //end the response
   });
