@@ -26,7 +26,7 @@ http.createServer(function (req, res) {
     if (response > 0) {
       var port = 80;
     } else {
-      var port = 5001;
+      var port = 3000;
     }
 
     // Create a JSON string
