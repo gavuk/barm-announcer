@@ -4,9 +4,10 @@ var os = require('os');
 var ps = require('ps-node');
 
 // Function to check if the wifi config tool is running
-function checkProc(proc, callback) {
+function checkProc(proc, args, callback) {
   ps.lookup({
     command: proc,
+    arguments: args,
     psargs: 'ux'
     }, function(err, resultList) {
     if (err) {
@@ -21,7 +22,7 @@ function checkProc(proc, callback) {
 // Create the HTTP server
 http.createServer(function (req, res) {
   // Check if the wifi config tool is currently running
-  checkProc('/usr/local/n/versions/node/6.10.2/bin/node server.js', function(response) {
+  checkProc('node', 'server.js', function(response) {
     // Set the port based on the number or processes found
     if (response > 0) {
       var port = 80;
